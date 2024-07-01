@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pump Coin</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">🚀 Pump Coin</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#fun">Fun</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero-section">
+        <h1 class="hero-title">Pump Up Your Portfolio with Pump Coin!</h1>
+        <button class="cta-button">Buy Pump Coin</button>
+        <!-- Removed Learn More button -->
+        <div class="social-buttons">
+            <a href="https://twitter.com/yourtoken" target="_blank">
+                <img src="twitter_button.png" alt="Twitter">
+            </a>
+            <a href="https://discord.com/invite/yourtoken" target="_blank">
+                <img src="discord_button.png" alt="Discord">
+            </a>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Pump Coin</h2>
+        <p>Welcome to Pump Token, the only token that promises to bring you to the moon with laughter! Join our community of fun-loving, meme-sharing, and crypto-savvy individuals!</p>
+    </section>
+
+    <section id="fun">
+        <h2>Have Fun with Pump Coin</h2>
+        <div class="pepe-rocket" id="pepeRocket">
+            <img src="pepe-rocket.png" alt="Pepe Rocket">
+        </div>
+        <canvas id="my-canvas" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;"></canvas>
+    </section>
+
+    <footer>
+        <p>&copy; PUMP COIN is live on dexscreener! Grab it before the sale ends!.</p>
+    </footer>
+</body>
+</html>
