@@ -1,0 +1,126 @@
+body {
+    font-family: 'Comic Sans MS', sans-serif;
+    background: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #ff4081;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero-section {
+    background: url('background.jpeg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-title {
+    color: darkgreen;
+}
+
+.cta-button {
+    background: #ff4081;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    margin: 0.5rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.cta-button:hover {
+    background: #ff79a1;
+}
+
+.social-buttons {
+    margin-top: 1rem;
+}
+
+.social-buttons a img {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+}
+
+section {
+    padding: 2rem;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+#fun {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    background: #e0e0e0;
+}
+
+.pepe-rocket {
+    width: 200px;
+    cursor: pointer;
+    transition: transform 2s ease-in-out;
+    margin: 1rem;
+}
+
+.pepe-rocket img {
+    width: 100%;
+}
+
+.pepe-rocket.clicked {
+    animation: rocketAnimation 5s infinite;
+}
+
+@keyframes rocketAnimation {
+    0% { transform: translateY(0) rotate(0); }
+    25% { transform: translateY(-300px) rotate(0); }
+    50% { transform: translate(200px, -300px) rotate(180deg); }
+    75% { transform: translate(0, -300px) rotate(360deg); }
+    100% { transform: translateY(0) rotate(360deg); }
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
