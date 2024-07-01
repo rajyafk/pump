@@ -1,21 +1,25 @@
-const rocket = document.getElementById('pepe-rocket');
-let angle = 0;
-let radius = 0;
-let isSpinning = false;
+document.addEventListener('DOMContentLoaded', () => {
+  const pepeRocketBtn = document.getElementById('pepe-rocket-btn');
+  const pepeRocket = document.getElementById('pepe-rocket');
+  const eggs = document.querySelectorAll('.hidden-egg');
 
-rocket.addEventListener('click', () => {
-    isSpinning = !isSpinning;
+  pepeRocketBtn.addEventListener('click', () => {
+    pepeRocket.style.display = 'block';
+    let angle = 0;
+
+    const moveRocket = () => {
+      angle += 0.05;
+      pepeRocket.style.top = `${50 + 30 * Math.sin(angle)}%`;
+      pepeRocket.style.left = `${50 + 30 * Math.cos(angle)}%`;
+      requestAnimationFrame(moveRocket);
+    };
+
+    moveRocket();
+  });
+
+  eggs.forEach(egg => {
+    egg.addEventListener('click', () => {
+      alert('You found an Easter Egg!');
+    });
+  });
 });
-
-function moveRocket() {
-    if (isSpinning) {
-        angle += 2;
-        radius += 0.5;
-        const x = 150 + radius * Math.cos(angle * Math.PI / 180);
-        const y = 150 + radius * Math.sin(angle * Math.PI / 180);
-        rocket.style.transform = `translate(-50%, -50%) translate(${x}px, ${y}px)`;
-    }
-    requestAnimationFrame(moveRocket);
-}
-
-moveRocket();
