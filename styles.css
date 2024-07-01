@@ -1,13 +1,13 @@
 body {
-    font-family: 'Comic Sans MS', sans-serif;
-    background: #f0f0f0;
-    color: #333;
+    font-family: 'Arial', sans-serif;
+    background: url('background.jpeg') no-repeat center center/cover;
+    color: #333; /* Darker text color for better contrast */
     margin: 0;
     padding: 0;
 }
 
 header {
-    background: #ff4081;
+    background-color: rgba(255, 64, 129, 0.9); /* Semi-transparent pink background */
     color: white;
     padding: 1rem;
     display: flex;
@@ -37,86 +37,80 @@ nav ul li a {
 }
 
 .hero-section {
-    background: url('background.jpeg') no-repeat center center/cover;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    padding: 4rem 2rem;
     text-align: center;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
 }
 
 .hero-title {
-    color: darkgreen;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.hero-intro {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
 }
 
 .cta-button {
-    background: #ff4081;
+    background-color: #ff4081;
     color: white;
     border: none;
     padding: 1rem 2rem;
-    margin: 0.5rem;
+    margin-top: 1rem;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: background-color 0.3s;
 }
 
 .cta-button:hover {
-    background: #ff79a1;
+    background-color: #ff79a1;
 }
 
 .social-buttons {
     margin-top: 1rem;
 }
 
-.social-buttons a img {
+.social-buttons a {
+    margin-right: 10px;
+}
+
+.social-buttons img {
     width: 40px;
     height: 40px;
-    margin: 0 10px;
+    border-radius: 50%;
 }
 
-section {
-    padding: 2rem;
-}
-
-section h2 {
+#about, #fun {
+    padding: 4rem 2rem;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
     text-align: center;
+}
+
+#about h2, #fun h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+#about p, #fun p {
+    font-size: 1.1rem;
+    line-height: 1.6;
     margin-bottom: 1rem;
 }
 
-#fun {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 50vh;
-    background: #e0e0e0;
+#about ul, #fun ul {
+    list-style-type: disc;
+    margin-left: 2rem;
 }
 
-.pepe-rocket {
-    width: 200px;
-    cursor: pointer;
-    transition: transform 2s ease-in-out;
-    margin: 1rem;
-}
-
-.pepe-rocket img {
-    width: 100%;
-}
-
-.pepe-rocket.clicked {
-    animation: rocketAnimation 5s infinite;
-}
-
-@keyframes rocketAnimation {
-    0% { transform: translateY(0) rotate(0); }
-    25% { transform: translateY(-300px) rotate(0); }
-    50% { transform: translate(200px, -300px) rotate(180deg); }
-    75% { transform: translate(0, -300px) rotate(360deg); }
-    100% { transform: translateY(0) rotate(360deg); }
+#about ul li, #fun ul li {
+    margin-bottom: 0.5rem;
 }
 
 footer {
-    background: #333;
+    background-color: #333;
     color: white;
     text-align: center;
     padding: 1rem;
